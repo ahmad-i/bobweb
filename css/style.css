@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Do+Hyeon&display=swap');
 
 @font-face {
@@ -12,7 +11,7 @@
 }
 
 body {
-    font-family: 'Dohyeon', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
  
@@ -33,7 +32,7 @@ body {
     font-style: normal;
   }
 
-  .bebas-neue-regular {
+.bebas-neue-regular {
     font-family: "Bebas Neue", serif;
     font-weight: 400;
     font-style: normal;
@@ -42,7 +41,7 @@ body {
 .mainBody {
     overflow-x: hidden;
     cursor: none;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -219,7 +218,7 @@ body, .work h3{
 
 
 h1, .box b {
-    font-family: 'Grumpy 24', serif;
+    font-family: "Do Hyeon", serif;
 }
 
 h1 {
@@ -358,35 +357,102 @@ p {
 
 .aa-content {
     display: flex;
+    width: 100%;
     flex-direction: column;
     min-height: 100vh;
     justify-content: center;
     position:relative;
 }
 
+.logo-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;  /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-grid {
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+    aspect-ratio: 16/9;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 15%;  /* Position from top */
+    left: 15%;  /* Position from left */
+    color: white;
+    font-size: 35px;
+    font-family: 'Bebas Neue';
+    z-index: 2;  /* Ensure text is above image */
+}
+
+.logo-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customer.customer-clients {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customer.customer-clients img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Optional: Add animation for text appearance */
+@keyframes fadeIn {
+from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+}
+to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+}
+
+.text-overlay {
+animation: fadeIn 1s ease-out forwards;
+}
+
 .work-1 {
-    opacity:0;
+    opacity:100;
     display:block;
     transform: translateX(-15px);
     transition: transform 0.3s linear 1s, opacity 0.3s linear 1s;
 }
 
 .work-2 {
-    opacity:0;
+    opacity:100;
     display:block;
     transform: translateX(-15px);
     transition: transform 0.3s linear 1.4s, opacity 0.3s linear 1.4s;
 }
 
 .work-3 {
-    opacity:0;
+    opacity:100;
     display:block;
     transform: translateX(-15px);
     transition: transform 0.3s linear 1.8s, opacity 0.3s linear 1.8s;
 }
 
 .work-4  {
-    opacity:0;
+    opacity:100;
     display:block;
     transform: translateX(-15px);
     transition: transform 0.3s linear 2.2s, opacity 0.3s linear 2.2s;
@@ -467,10 +533,12 @@ font-weight: 700px;
 }
 
 #collaborations span, #aa-title span, #services span {
-    opacity:0;
+    opacity:100;
     display:inline-block;
     transform: translateY(15px);
     transition: transform 0.3s linear, opacity 0.3s linear;
+    color:#000000;
+    font-family: 'Bebas Neue';
 }
 
 .footer-box-center.animated li, #address.animated, .footer-box-right.animated, #aa-loghi.animated {
@@ -533,7 +601,7 @@ font-weight: 700px;
 
 #social-media li, #branding li, #web-design li, #advertising li {
     display:block;
-    opacity:0;
+    opacity:100;
     transform: translateX(-15px);
     transition-timing-function: cubic-bezier(.25,.46,.45,.94), cubic-bezier(.25,.46,.45,.94);
     transition-property: transform, opacity;
@@ -671,6 +739,8 @@ font-weight: 700px;
 .container {
     position: relative;
     margin-bottom: 100px;
+    /* max-width: 1200px;
+    margin: 0 auto; */
 }
 
 .customer {
@@ -730,6 +800,7 @@ font-weight: 700px;
 .work {
     width: 40%;
     margin: 0 10% 5% 0;
+    font-family: 'Bebas Neue';
 }
 
 .work h3{
@@ -1005,3 +1076,111 @@ iframe.animated{
 .cursor_onbutton{
     display: none;
 }
+
+.clients-heading {
+    font-family: 'Bebas Neue';
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #fff;
+    display: none;
+}
+
+#aa-title {
+    margin-bottom: 60px;
+    display: block;
+    color: #fff;
+}
+
+.clients-section {
+    position: relative;
+    padding-top: 150px;  /* Increase padding to make room for centered text */
+}
+
+.clients-section h2 {
+    position: absolute;
+    top: 20px;  /* Adjust to move text down from top */
+    left: 50%;  /* Center horizontally */
+    transform: translateX(-50%);  /* Center horizontally */
+    margin: 0;
+    color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+    z-index: 2;
+    width: 100%;
+    text-align: center;  /* Center the text */
+}
+
+.customer.customer-clients {
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+}
+
+/* Ensure the container allows for absolute positioning */
+#award-agency.container.black {
+    position: relative;
+    padding-top: 80px;
+}
+
+header {
+    margin-bottom: 4rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.services-section {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.service-title {
+    font-size: 2.5rem;
+    /* font-weight: bold; */
+    letter-spacing: 1px;
+}
+
+.service-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.service-list {
+    list-style: none;
+}
+
+.service-list li {
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .services-section {
+        grid-template-columns: 1fr;
+    }
+
+    .service-details {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
